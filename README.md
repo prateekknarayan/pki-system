@@ -10,13 +10,4 @@ This project implements a simplified Public Key Infrastructure (PKI) system incl
 
 ## Architecture
 
-sequenceDiagram
-    participant Client
-    participant PKI
-    participant CA
-
-    Client->>PKI: Request Certificate
-    PKI->>CA: Send CSR
-    CA->>PKI: Signed Certificate
-    PKI->>Client: Return Certificate
-
+<pre> ```text ┌──────────────────────┐ │ Client/API │ └─────────┬────────────┘ │ ┌─────────▼────────────┐ │ PKI Core Services │ └─────────┬────────────┘ │ ┌──────────────┼──────────────┐ ▼ ▼ ▼ Key Mgmt Cert Mgmt Revocation │ │ │ └──────────┬───┴────┬─────────┘ ▼ ▼ Crypto Layer Storage Layer ``` </pre>
