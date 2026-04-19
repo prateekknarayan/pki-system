@@ -15,7 +15,7 @@ graph TD
     A[Client / API] --> B[PKI Core Services]
 
     B --> C[Key Management]
-    B --> D[Certificate Management]
+    B --> D[Certificate Management (Issuance + validation)]
     B --> E[Revocation]
 
     C --> F[Crypto Layer]
