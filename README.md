@@ -10,4 +10,18 @@ This project implements a simplified Public Key Infrastructure (PKI) system incl
 
 ## Architecture
 
-(You can paste the architecture diagram here later)
+                ┌──────────────────────┐
+                │      Client/API      │
+                └─────────┬────────────┘
+                          │
+                ┌─────────▼────────────┐
+                │   PKI Core Services  │
+                └─────────┬────────────┘
+                          │
+        ┌─────────────────┼─────────────────┐
+        ▼                 ▼                 ▼
+   Key Management   Certificate Mgmt   Revocation
+        │                 │                 │
+        └──────────┬──────┴──────┬──────────┘
+                   ▼             ▼
+             Crypto Layer   Storage Layer
